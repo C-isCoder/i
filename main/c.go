@@ -1,4 +1,4 @@
-package i
+package main
 
 import "fmt"
 /**
@@ -16,7 +16,7 @@ type user struct {
 
 // user 指针接收者实现接口
 func (u *user) notify() {
-	fmt.Println("Sending user email to %s<%s>\n", u.name, u.email)
+	fmt.Printf("Sending user email to %s<%s>\n", u.name, u.email)
 }
 
 // 方法接受实现了 notifier 接口的值

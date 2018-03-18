@@ -1,4 +1,4 @@
-package i
+package main
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ func main() {
 
 	b.Write([]byte("hello"))
 
-	fmt.Fprintf(&b," World")
+	fmt.Fprint(&b,"World")
 
 	io.Copy(os.Stdout,&b)
 }

@@ -9,13 +9,13 @@ type notifer interface {
 	notify()
 }
 
-type user struct {
+type users struct {
 	name string
 	email string
 }
 
-func (u *user) notify()  {
-	fmt.Println("Sending user email to %s<%s>\n",u.name,u.email)
+func (u *users) notify()  {
+	fmt.Printf("Sending user email to %s<%s>\n",u.name,u.email)
 }
 
 type amdin struct {
@@ -24,7 +24,7 @@ type amdin struct {
 	}
 
 func (a *amdin)notify()  {
-	fmt.Println("Sending admin email to %s<%s>n",a.name,a.email)
+	fmt.Printf("Sending admin email to %s<%s>n",a.name,a.email)
 }
 
 func sendNotification(n notifer)  {
@@ -32,7 +32,7 @@ func sendNotification(n notifer)  {
 }
 
 func main() {
-	bill := user{"Bill","bill@email.com"}
+	bill := users{"Bill","bill@email.com"}
 	sendNotification(&bill)
 
 	lisa := amdin{"lisa", "lisa@email.com"}
