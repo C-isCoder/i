@@ -1,8 +1,9 @@
 package i
 
 import "fmt"
-
-// 	定义接口
+/**
+ *	接口
+ */
 type notifier interface {
 	notify()
 }
