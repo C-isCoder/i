@@ -1,0 +1,2 @@
+WARNING: 2018/03/20 17:55:02 p.go:34: Something has failed
+ERROR: 2018/03/20 17:55:53 p.go:34: Something has failed
